@@ -5,7 +5,7 @@ import Contact from './ContactComponent';
 import Info from './InfoComponent';
 import Booking from './BookingComponent';
 import {Routes, Route} from 'react-router-dom';
-import { ListGroup, ListGroupItem, Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink,Row, Col, Container } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 
 export default function Main(){
     return(
