@@ -1,13 +1,11 @@
-import './App.css';
-import Main from './components/Main';
-import {BrowserRouter as Router } from 'react-router-dom';
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import allRoutes from "./routes";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-      <Main />
-      </Router>
+      <RouterProvider router={allRoutes} />
     </div>
   );
 }

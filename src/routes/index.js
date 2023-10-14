@@ -1,8 +1,13 @@
 import { Navigate, createHashRouter } from "react-router-dom";
-import { CancelPolicyContent } from "../layouts/cancel-policy/cancel-policy";
-import NavigationBar from "../layouts/navigation-bar";
-import { PrivacyPolicyContent } from "../layouts/privacy-policy";
-import { TermsAndConditionsContent } from "../layouts/terms-and-conditions";
+import { NavigationBar } from "../components/navigation-bar";
+import {
+  AboutPage,
+  BookingPage,
+  ContactPage,
+  ErrorPage,
+  HomePage,
+  InfoPage,
+} from "../pages";
 
 const allRoutes = createHashRouter([
   {
@@ -14,29 +19,11 @@ const allRoutes = createHashRouter([
         errorElement: <ErrorPage />,
         children: [
           { path: "/", element: <Navigate to="home" /> },
-          { path: "home", element: <Home /> },
-          { path: "products", element: <ProductsPage /> },
-          {
-            path: "legal",
-            element: <LegalPolicyPage />,
-            children: [
-              { path: "", element: <Navigate to="privacy-policy" /> },
-              { path: "privacy-policy", element: <PrivacyPolicyContent /> },
-              {
-                path: "cancellation-policy",
-                element: <CancelPolicyContent />,
-              },
-              {
-                path: "terms-and-conditions",
-                element: <TermsAndConditionsContent />,
-              },
-            ],
-          },
-          { path: "contact", element: <ContactUsPage /> },
-          { path: "industry/:heading", element: <IndustryPage /> },
-          { path: "blog", element: <BlogPage /> },
-          { path: "blog/:heading", element: <Blog /> },
-          { path: "about-us", element: <AboutUsPage /> },
+          { path: "home", element: <HomePage /> },
+          { path: "about", element: <AboutPage /> },
+          { path: "contact", element: <ContactPage /> },
+          { path: "info", element: <InfoPage /> },
+          { path: "booking", element: <BookingPage /> },
           { path: "*", element: <ErrorPage /> },
         ],
       },
