@@ -1,8 +1,9 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Avatar, Box, Button } from "@mui/material";
 import { Children } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { NavigationLinks } from "../profile/homePageData";
 import { Footer } from "./footer";
+import { logo } from "../assets/images/index";
 
 export const NavigationBar = () => {
   return (
@@ -16,9 +17,7 @@ export const NavigationBar = () => {
         height={"10vh"}
       >
         <Link to={"/"}>
-          <Box>
-            <Typography fontSize={36}>Logo</Typography>
-          </Box>
+          <Avatar alt="Remy Sharp" src={logo} sx={{ width: 36, height: 36 }} />
         </Link>
         <Box
           display={"flex"}

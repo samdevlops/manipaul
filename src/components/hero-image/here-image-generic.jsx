@@ -19,7 +19,11 @@ export const HeroImageGeneric = () => {
         maxWidth={"90%"}
         width={"85%"}
       >
-        <Box>Contains</Box>
+        <Box textAlign={"center"} color="#1963e3">
+          Manipaul Hospitals is one of the best multispeciality hospital in
+          Bangalore. We provide world-class healthcare services & treatment at a
+          reasonable cost.
+        </Box>
         <Box
           width={"50%"}
           sx={{
@@ -29,7 +33,8 @@ export const HeroImageGeneric = () => {
             backgroundPosition: "center",
             mixBlendMode: "multiply",
           }}
-        ></Box>
+        >
+        </Box>
       </Box>
     </Box>
   );
